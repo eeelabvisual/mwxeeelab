@@ -1,8 +1,7 @@
 
 #include <Servo.h> 
 
-Servo myservo;  // create servo object to control a servo 
-                // twelve servo objects can be created on most boards
+Servo myservo;  
 
 #include <ESP8266WiFi.h>
  
@@ -91,7 +90,7 @@ void loop() {
  
 
   if (request.indexOf("/SERVO=ON") != -1) {
-                       // in steps of 1 degree 
+ 
    servoOn();
    delay(1500);
    servoOff();
