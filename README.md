@@ -15,6 +15,6 @@ LOWLEVEL
 
 HIGH LEVEL
 - 3D print design with acrylic double side tape
-- Mounting to actually perfume by MW
-- ELV provide another set of 3d print model for extra bottle
+- Mounting to actual perfume by MW
+- EEELAB provide another set of 3d print model for extra bottle/standby set
 - Router modem is recommended for connection stability, mifi is an optional idea
