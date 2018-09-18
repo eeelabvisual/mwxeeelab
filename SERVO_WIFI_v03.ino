@@ -15,7 +15,7 @@ int value = LOW;
 void setup() {
 
   Serial.begin(9600);
-   myservo.attach(D7);  // attaches the servo on GIO2 to the servo object 
+   myservo.attach(D7); 
    myservo.write(0);
   delay(10);
  
@@ -56,15 +56,6 @@ void setup() {
  delay(15);
  value = HIGH;
  }
- /*
-  void servoBack (){
-  int pos3;
- 
- pos3 = 20;
- myservo.write(pos3); 
- delay(15);
- value = LOW;
- }*/
  
    void servoOff (){
   int pos2;
@@ -109,13 +100,7 @@ void loop() {
  
   } 
 
-/*  if (request.indexOf("/SERVO=OFF") != -1){
-     servoOff();
-  }
- */
- 
-
- 
+  
   // Return the response
   client.println("HTTP/1.1 200 OK");
   client.println("Content-Type: text/html");
@@ -123,16 +108,9 @@ void loop() {
   client.println("<!DOCTYPE HTML>");
   client.println("<html>");
  
-//  client.print("Servo pin is now: ");
- 
-/*  if(value == HIGH) {
-    client.print("On");  
-  } else {
-    client.print("Off");
-  }*/
+
   client.println("<br><br>");
   client.println("Click <a href=\"/SERVO=ON\">here</a> to Spray <br>");
- // client.println("Click <a href=\"/SERVO=OFF\">here</a> Debug Servo<br>");
   client.println("</html>");
  
   delay(1);
