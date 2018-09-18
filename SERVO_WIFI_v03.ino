@@ -6,8 +6,8 @@ Servo myservo;  // create servo object to control a servo
 
 #include <ESP8266WiFi.h>
  
-const char* ssid = "EEELAB VISUAL";
-const char* password = "B2139420";
+const char* ssid = "WIFI";
+const char* password = "PASSWORD";
  
 WiFiServer server(80);
 int value = LOW;
