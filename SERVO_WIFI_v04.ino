@@ -1,19 +1,27 @@
-
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266WebServer.h>
 #include <Servo.h> 
 
-Servo myservo;  
+Servo myservo;  // create servo object to control a servo 
+                // twelve servo objects can be created on most boards
 
-#include <ESP8266WiFi.h>
- 
 const char* ssid = "WIFI";
 const char* password = "PASSWORD";
+
+
+
+
  
 WiFiServer server(80);
 int value = LOW;
  
 void setup() {
+  
 
-  Serial.begin(9600);
+
+  
+  Serial.begin(115200);
    myservo.attach(D7); 
    myservo.write(0);
   delay(10);
@@ -26,6 +34,7 @@ void setup() {
   Serial.print("Connecting to ");
   Serial.println(ssid);
  
+
   WiFi.begin(ssid, password);
  
   while (WiFi.status() != WL_CONNECTED) {
@@ -90,7 +99,7 @@ void loop() {
  
 
   if (request.indexOf("/SERVO=ON") != -1) {
- 
+                       // in steps of 1 degree 
    servoOn();
    delay(1500);
    servoOff();
